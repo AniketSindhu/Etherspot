@@ -2,21 +2,19 @@ import {
   EtherspotBatches,
   EtherspotBatch,
   EtherspotTransaction,
-  useEtherspotAddresses,
   useEtherspotTransactions,
+  useEtherspotAddresses,
 } from "@etherspot/transaction-kit";
 import { useState } from "react";
 export default function App() {
   const { estimate, send } = useEtherspotTransactions();
-  const etherspotAddresses = useEtherspotAddresses();
-
-  const [address, setAddress] = useState(
-    "0xcfa038455b54714821f291814071161c9870B891"
-  );
-  const [amount, setAmount] = useState("0.001");
+  const etherspotAddresses = useEtherspotAddresses(80001);
+  console.log(etherspotAddresses)
+  const [address, setAddress] = useState('0xcfa038455b54714821f291814071161c9870B891');
+const [amount, setAmount] = useState('0.001');
 
   return (
-    <EtherspotBatches>
+    <EtherspotBatches via="etherspot-prime">
       <EtherspotBatch>
         <EtherspotTransaction to={address} value={amount}>
          

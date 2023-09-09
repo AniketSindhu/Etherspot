@@ -5,7 +5,7 @@
   "dependencies": {
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
-    "@etherspot/transaction-kit": "0.2.0",
+    "@etherspot/transaction-kit": "0.4.2",
     "@mui/material": "5.11.14",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
